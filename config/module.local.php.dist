@@ -1,0 +1,9 @@
+<?php
+return array(
+    'google_apps_api' => array(
+        'consumer_key'=>     'PROJECT_ID.apps.googleusercontent.com',
+        'consumer_secret' => 'CONSUMER_SECRET',
+        'base_url' => 'YOUR_REALM_BASE_URL',
+        'store_path' => '/tmp/_php_consumer_test', // Store PATH for session.
+    ),
+);
