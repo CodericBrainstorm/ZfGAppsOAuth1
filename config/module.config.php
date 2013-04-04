@@ -16,7 +16,7 @@ return array(
                         'id'     => '[0-9]+',
                     ),
                     'defaults' => array(
-                        'controller' => 'GAppsOAuth1\Controller\Auth',
+                        'controller' => 'GAppsOAuth1\Controller\GAppsOAuth1',
                         'action'     => 'index',
                     ),
                 ),
