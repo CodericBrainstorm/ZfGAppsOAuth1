@@ -3,7 +3,7 @@
  * Description of GAppsOAuth1Consumer
  * @author Neftalí Yagua <neftali.yagua@gmail.com>
  */
-namespace GAppsOAuth1\Model;
+//namespace GAppsOAuth1\Model;
 use Auth\OpenID;
 class GAppsOAuth1Consumer extends Consumer{
     public function __construct(){
