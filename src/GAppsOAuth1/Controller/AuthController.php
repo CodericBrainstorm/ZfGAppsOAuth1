@@ -9,11 +9,13 @@
 
 namespace GAppsOAuth1\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
+/*
 use Auth\OpenID\google_discovery;
 use Auth\OpenID\AX;
 use Auth\OpenID\Consumer;
 use Auth\OpenID\FileStore;
 use Auth\OpenID\PAPE;
+*/
 use GAppsOAuth1\Model\GAppsOAuth1Consumer;
 
 class AuthController extends AbstractActionController
