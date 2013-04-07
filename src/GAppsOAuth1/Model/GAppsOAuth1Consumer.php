@@ -3,7 +3,7 @@
  * Description of GAppsOAuth1Consumer
  * @author Neftalí Yagua <neftali.yagua@gmail.com>
  */
-namespace GAppsOAuth1\Model;
+
 class GAppsOAuth1Consumer extends Auth_OpenID_Consumer{
     public function __construct(){
         $STORE_PATH = "/tmp/_php_consumer_test";
