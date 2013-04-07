@@ -30,6 +30,9 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                     'Auth' => __DIR__ . '/../../vendor/Auth',
                 ),
+                'prefixes' => array( 
+                    'Auth' => __DIR__ . '/../../vendor/Auth',
+                ),
             ),
         );
     }
@@ -39,3 +42,4 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 }
+echo  __DIR__ . '/../../vendor/Auth';
