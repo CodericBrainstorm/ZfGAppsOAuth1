@@ -4,7 +4,7 @@
  * @author Neftalí Yagua <neftali.yagua@gmail.com>
  */
 //namespace GAppsOAuth1\Model;
-use Auth\OpenID;
+require_once("Auth/OpenID/Consumer.php");
 class GAppsOAuth1Consumer extends Auth_OpenID_Consumer{
     public function __construct(){
         $STORE_PATH = "/tmp/_php_consumer_test";
