@@ -42,4 +42,3 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 }
-echo  __DIR__ . '/../../vendor/Auth';
