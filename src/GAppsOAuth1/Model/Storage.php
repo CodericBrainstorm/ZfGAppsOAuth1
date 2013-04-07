@@ -5,7 +5,7 @@
  */
 namespace GAppsOAuth1\Model;
 use Zend\Authentication\Storage;
-class GAppsOAuth1_Storage extends Storage\Session
+class Storage extends Storage\Session
 {
     public function setRememberMe($rememberMe = 0, $time = 1209600)
     {

@@ -14,14 +14,14 @@ use Auth\OpenID\AX;
 use Auth\OpenID\Consumer;
 use Auth\OpenID\FileStore;
 use Auth\OpenID\PAPE;
-use GAppsOAuth1\Model\GAppsOAuth1_Consumer;
+use GAppsOAuth1\Model\Consumer;
 
 class AuthController extends AbstractActionController
 {
     public function loginAction()
     {
-        $consumer = new GAppsOAuth1_Consumer();
-        new GAppsOAuth1_Discover($consumer);
+        $consumer = new Consumer();
+        new Discover($consumer);
 ########################################################################
         $BASE_URL = 'http://reservas.valencialosroques.com';
         $auth = $consumer->begin("valencialosroques.com");
