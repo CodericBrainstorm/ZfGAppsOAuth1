@@ -20,6 +20,38 @@ class AuthController extends AbstractActionController
 {
     public function loginAction()
     {
+        $consumer = new GAppsOAuth1_Consumer();
+        new GAppsOAuth1_Discover($consumer);
+########################################################################
+        $BASE_URL = 'http://reservas.valencialosroques.com';
+        $auth = $consumer->begin("valencialosroques.com");
+        /**
+         * Request access to e-mail address, first name and last name
+         * via OpenID Attribute Exchange (AX)
+         *
+         * IMPORTANT: If using values from OpenID AX, please be sure to follow
+         * the security considerations documented on code.google.com/googleapps
+         * on the 'Best Practices' document.
+         */
+        $attribute = array(
+            Auth_OpenID_AX_AttrInfo::make('http://axschema.org/contact/email',2,1, 'email'),
+            Auth_OpenID_AX_AttrInfo::make('http://axschema.org/namePerson/first',1,1, 'firstname'),
+            Auth_OpenID_AX_AttrInfo::make('http://axschema.org/namePerson/last',1,1, 'lastname')
+        );
+
+        $ax = new Auth_OpenID_AX_FetchRequest;
+        foreach($attribute as $attr){
+                $ax->add($attr);
+        }
+        $auth->addExtension($ax);
+/**
+ * Redirect user to Google to complete OpenID authentication
+ * Params for $auth->redirectURL():
+ *   1. the openid.realm (which must match declared value in manifest)
+ *   2. the openid.return_to (URL to return to after authentication is complete)
+ */
+        $url = $auth->redirectURL($BASE_URL . '/', $BASE_URL . '/auth/token');
+        header('Location: ' . $url);
     }
     public function callbackAction()
     {

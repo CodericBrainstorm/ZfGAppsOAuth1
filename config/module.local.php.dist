@@ -4,6 +4,7 @@ return array(
         'consumer_key'=>     'PROJECT_ID.apps.googleusercontent.com',
         'consumer_secret' => 'CONSUMER_SECRET',
         'base_url' => 'YOUR_REALM_BASE_URL',
+        'domain' => 'YOUR_EMAIL_DOMAIN_BASE',
         'store_path' => '/tmp/_php_consumer_test', // Store PATH for session.
     ),
 );

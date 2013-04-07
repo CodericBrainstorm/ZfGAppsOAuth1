@@ -1,7 +1,11 @@
 <?php
+/**
+ * Description of GAppsOAuth1_Storage
+ * @author Neftalí Yagua <neftali.yagua@gmail.com>
+ */
 namespace GAppsOAuth1\Model;
 use Zend\Authentication\Storage;
-class GAppsOAuth1Storage extends Storage\Session
+class GAppsOAuth1_Storage extends Storage\Session
 {
     public function setRememberMe($rememberMe = 0, $time = 1209600)
     {
